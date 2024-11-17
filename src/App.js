@@ -1,23 +1,26 @@
-import logo from './logo.svg';
+import React, {   useState } from 'react';
 import './App.css';
+import Cover from './component/Cover'
+import Foto from './component/Foto';
+import backgroundImage from './images/paper-1.png'
 
 function App() {
+const ahandle = ()=>{
+  
+}
+  
+const [stateClick,setStateClick] = useState(0)
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div onLoad={ahandle} id="containerall"   style={{position:'relative',backgroundImage:`url(${backgroundImage})`,overflowX:'hidden',height:'100%', overflowY:`${stateClick===1?'auto':'hidden'}`}} >  
+      {/* <audio id="audioplay"  autoPlay={true} >
+ 
+      <source src={Audios} type="audio/mpeg"/>
+  Your browser does not support the audio element.
+</audio> */}
+      <Cover data={stateClick} setStateClick={setStateClick}/>
+      {stateClick?<Foto data={stateClick} ></Foto>:""}
     </div>
   );
 }
