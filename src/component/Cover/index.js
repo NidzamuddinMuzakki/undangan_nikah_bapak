@@ -20,7 +20,7 @@ const Cover = ({data,setStateClick})=>{
                 <DivTanggal>Minggu 12 Januari 2025</DivTanggal>
                 <DivNamaPengantin>RIZQI & NIDZAM</DivNamaPengantin>
                 <DivAppreciate>Appreciate For Your Coming</DivAppreciate>
-                <DivTamuUNdangan>MAN2 IPA2</DivTamuUNdangan>
+                <DivTamuUNdangan>KELUARGA BESAR</DivTamuUNdangan>
                 {data?"":<HashLink style={{textDecoration:'none'}} smooth to={"/#pengantin"} onClick={()=>{
                     setStateClick(1)
                     const audio = new Audio(Audios)

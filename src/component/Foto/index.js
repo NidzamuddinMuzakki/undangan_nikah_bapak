@@ -1,5 +1,9 @@
 import React from "react";
-import {DivNAMA3,DivNamaPengantin,DivKeteranganKeluarga,DivKeteranganNamaOrtu,DivNAMA,DivNAMA2,DivFOTO,DivFotoFlexContainer,DivGreatPleasure,DivInviteYou,DivCelebrate,DivLineGreate} from './styled'
+import {DivNamaPengantin2,DivKotakFOTO,DivNamaPengantin,DivKeteranganKeluarga,DivKeteranganNamaOrtu,DivNAMA2,DivFOTO,DivFOTO2,DivFotoFlexContainer,DivGreatPleasure,DivInviteYou,DivCelebrate,DivLineGreate} from './styled'
+
+import Border1 from './../../images/02.png'
+import Border2 from './../../images/01.png'
+import NidzamImage from './../../images/1731908488185.jpg'
 
 
 const Foto = ()=>{
@@ -17,7 +21,35 @@ const Foto = ()=>{
                 To Celebrate Our marriage
             </DivCelebrate>
             <DivFotoFlexContainer  >
-                <DivFotoFlexContainer className="muncul-kiri" id="pengantin1">
+                <DivKotakFOTO className="muncul-kiri">
+                    <DivFOTO  src={NidzamImage} />
+                        <DivNamaPengantin2>NM</DivNamaPengantin2>
+                   
+                    <DivFOTO2 >
+                        <img src={Border1} style={{width:'100%',height:'100%'}} alt="border"></img>
+                    </DivFOTO2>
+                    <DivNAMA2>
+                        <DivNamaPengantin>Nidzamuddin Muzakki</DivNamaPengantin>
+                        <DivKeteranganKeluarga>Putra Kedua dari Keluarga</DivKeteranganKeluarga>
+                        <DivKeteranganNamaOrtu>Bapak Niz'am & Ibu Mutmaini</DivKeteranganNamaOrtu>
+
+                    </DivNAMA2>
+                </DivKotakFOTO>
+                <DivKotakFOTO className="muncul-kanan">
+                    <DivFOTO   src="https://ehv9nqzx9ct.exactdn.com/wp-content/uploads/elementor/thumbs/02-11-qok9i647r7ylen0i0i3sehs8ub3zfg983daw5zho00.png?strip=all&lossy=1&w=159&ssl=1" >
+                    <DivNamaPengantin2>RS</DivNamaPengantin2>
+                    </DivFOTO>
+                    <DivFOTO2 >
+                        <img src={Border2} style={{width:'100%',height:'100%'}} alt="border"></img>
+                    </DivFOTO2>
+                    <DivNAMA2>
+                        <DivNamaPengantin>Rizqi Salsabila</DivNamaPengantin>
+                        <DivKeteranganKeluarga>Putri Kedua dari Keluarga</DivKeteranganKeluarga>
+                        <DivKeteranganNamaOrtu>Bapak Hanafi & Ibu Isti</DivKeteranganNamaOrtu>
+
+                    </DivNAMA2>
+                </DivKotakFOTO>
+                {/* <DivFotoFlexContainer className="muncul-kiri" id="pengantin1">
 
                 <DivNAMA>
                     <DivNamaPengantin>Nidzamuddin Muzakki</DivNamaPengantin>
@@ -34,19 +66,17 @@ const Foto = ()=>{
                     <DivKeteranganNamaOrtu>Bapak Niz'am & Ibu Mutmaini</DivKeteranganNamaOrtu>
 
                 </DivNAMA3>
-                </DivFotoFlexContainer>
-                <DivFotoFlexContainer className="muncul-kanan" id="pengantin2">
+                </DivFotoFlexContainer> */}
+                {/* <DivFotoFlexContainer className="muncul-kanan" id="pengantin2">
 
-                <DivFOTO   src="https://ehv9nqzx9ct.exactdn.com/wp-content/uploads/elementor/thumbs/02-11-qok9i647r7ylen0i0i3sehs8ub3zfg983daw5zho00.png?strip=all&lossy=1&w=159&ssl=1" >
-
-                </DivFOTO>
+                
                 <DivNAMA2>
                     <DivNamaPengantin>Rizqi Salsabila</DivNamaPengantin>
                     <DivKeteranganKeluarga>Putri Kedua dari Keluarga</DivKeteranganKeluarga>
                     <DivKeteranganNamaOrtu>Bapak Hanafi & Ibu Isti</DivKeteranganNamaOrtu>
 
-                </DivNAMA2>
-                </DivFotoFlexContainer>
+                </DivNAMA2> */}
+                {/* </DivFotoFlexContainer> */}
                 
             </DivFotoFlexContainer>
             <div id="pengantin"></div>

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+import ImageBackground from './../../images/paper-1.png'
 export const DivLineGreate = styled.div`
     position:relative;
     top:-7.5px;
@@ -64,9 +64,10 @@ export const DivFotoFlexContainer = styled.div`
     align-items:center;
     position:relative; 
     justify-content:center;
-    gap:20px;
+    gap:50px;
     margin:50px 40px;
     oveflow:hidden;
+  
     @media only screen and (min-width:268px){
         flex-direction:column;
     }
@@ -98,37 +99,58 @@ export const DivNAMA = styled.div`
 
 export const DivNAMA3 = styled.div`
     width:300px;
-    text-align:end;
+    text-align:center;
     @media only screen and (min-width:268px){
         text-align:center;
         display:block;
     }
     @media only screen and (min-width:768px){  
-        text-align:end;
-        display:none;
+        text-align:center;
+        display:block;
     }
     @media only screen and (min-width:1024px){
-      display:none;
-       text-align:end;
+      display:block;
+       text-align:center;
     }
 `
 export const DivNAMA2 = styled.div`
-    text-align:start;
+    text-align:center;
     width:300px;
+    margin-top:30px;
     @media only screen and (min-width:268px){
         text-align:center;
     }
     @media only screen and (min-width:768px){  
-        text-align:start;
+        text-align:center;
     }
     @media only screen and (min-width:1024px){
       
-       text-align:start;
+       text-align:center;
+    }
+`
+export const DivNamaPengantin2 = styled.div`
+   
+    color: #C58815;
+    position:absolute;
+    font-family: "Croissant One", Sans-serif;
+    text-shadow: 0 6px 6px rgb(0 0 0 / .19);
+    letter-spacing: 2px;
+    @media only screen and (min-width:268px){
+        font-size: 60px;
+        top:20%;
+    }
+    @media only screen and (min-width:768px){  
+        font-size: 80px;
+        top:23%;
+    }
+    @media only screen and (min-width:1024px){
+      font-size: 80px;
+      top:22.5%;
     }
 `
 export const DivNamaPengantin = styled.div`
     margin-bottom: 0;
-    color: #43638B;
+    color: #C58815;
     font-family: "Croissant One", Sans-serif;
     font-size: 25px;
     letter-spacing: -2.5px;
@@ -179,10 +201,81 @@ export const DivKeteranganNamaOrtu = styled.div`
     }
 `
 
-export const DivFOTO = styled.img`
+export const DivFOTO = styled.div`
     display:flex;
     align-items:center;
-    width:180px;
-    height:180px;
-    border-radius:10px;
+    position:relative;
+    justify-content:center;
+    background: rgba(255, 228, 179,0.3);
+    border-radius:50%;
+    border-width: 2px 0.4px 2px 0.4px;
+    border-color:#FFE4B2 ;
+    border-style: solid;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    @media only screen and (min-width:268px){
+        width:150px;
+        height:150px;
+        margin-top:-70px;
+    }
+    @media only screen and (min-width:768px){  
+        width:250px;
+        height:250px;
+         margin-top:0px;
+    }
+    @media only screen and (min-width:1024px){
+      width:250px;
+        height:250px;
+        margin-top:0px;
+    }
+`
+export const DivFOTO2 = styled.div`
+    position:absolute;
+    top:10px;
+    display:flex;
+    align-items:center;
+    width:400px;
+    height:300px;
+    @media only screen and (min-width:268px){
+        width:250px;
+        height:200px;
+    }
+    @media only screen and (min-width:768px){  
+        width:400px;
+        height:300px;
+    }
+    @media only screen and (min-width:1024px){
+        width:400px;
+        height:300px;
+    }
+   
+`
+
+export const DivKotakFOTO = styled.div`
+    width:400px; 
+    position:relative;
+    padding:30px 0px;
+    oveflow:hidden;
+    border-style: solid;
+    border-width: 2px 0px 2px 0px;
+    border-color:#FFE4B2 ;
+    border-radius: 10px 10px 10px 10px;
+    //background: rgba(255, 228, 179,0.5);
+    background-image:url(${ImageBackground});
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    @media only screen and (min-width:268px){
+        height:300px;
+        padding:10px 0px;
+    }
+    @media only screen and (min-width:768px){
+        height:380px;
+        padding:30px 0px;
+    }
+    @media only screen and (min-width:1024px){
+        height:380px;   
+        padding:30px 0px;
+    }
 `
