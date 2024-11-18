@@ -279,3 +279,17 @@ export const DivKotakFOTO = styled.div`
         padding:30px 0px;
     }
 `
+
+export const DIVPengantingRedirect = styled.div`
+    position:absolute;
+    opacity:0;
+    @media only screen and (min-width:268px){
+        top:0%;
+    }
+    @media only screen and (min-width:768px){
+        top:-100px;
+    }
+    @media only screen and (min-width:1024px){
+        top:-100px;
+    }
+`

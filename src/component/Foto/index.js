@@ -1,5 +1,5 @@
 import React from "react";
-import {DivNamaPengantin2,DivKotakFOTO,DivNamaPengantin,DivKeteranganKeluarga,DivKeteranganNamaOrtu,DivNAMA2,DivFOTO,DivFOTO2,DivFotoFlexContainer,DivGreatPleasure,DivInviteYou,DivCelebrate,DivLineGreate} from './styled'
+import {DIVPengantingRedirect,DivNamaPengantin2,DivKotakFOTO,DivNamaPengantin,DivKeteranganKeluarga,DivKeteranganNamaOrtu,DivNAMA2,DivFOTO,DivFOTO2,DivFotoFlexContainer,DivGreatPleasure,DivInviteYou,DivCelebrate,DivLineGreate} from './styled'
 
 import Border1 from './../../images/02.png'
 import Border2 from './../../images/01.png'
@@ -20,7 +20,8 @@ const Foto = ()=>{
             <DivCelebrate>
                 To Celebrate Our marriage
             </DivCelebrate>
-            <DivFotoFlexContainer  >
+            <DivFotoFlexContainer   >
+            
                 <DivKotakFOTO className="muncul-kiri">
                     <DivFOTO  src={NidzamImage} />
                         <DivNamaPengantin2>NM</DivNamaPengantin2>
@@ -35,6 +36,7 @@ const Foto = ()=>{
 
                     </DivNAMA2>
                 </DivKotakFOTO>
+                <DIVPengantingRedirect id="pengantin"></DIVPengantingRedirect>
                 <DivKotakFOTO className="muncul-kanan">
                     <DivFOTO   src="https://ehv9nqzx9ct.exactdn.com/wp-content/uploads/elementor/thumbs/02-11-qok9i647r7ylen0i0i3sehs8ub3zfg983daw5zho00.png?strip=all&lossy=1&w=159&ssl=1" >
                     <DivNamaPengantin2>RS</DivNamaPengantin2>
@@ -79,7 +81,7 @@ const Foto = ()=>{
                 {/* </DivFotoFlexContainer> */}
                 
             </DivFotoFlexContainer>
-            <div id="pengantin"></div>
+            
         
         </div>
     )
