@@ -137,15 +137,15 @@ export const DivNamaPengantin2 = styled.div`
     letter-spacing: 2px;
     @media only screen and (min-width:268px){
         font-size: 60px;
-        top:20%;
+        top:17.5%;
     }
     @media only screen and (min-width:768px){  
         font-size: 80px;
-        top:23%;
+        top:18.5%;
     }
     @media only screen and (min-width:1024px){
       font-size: 80px;
-      top:22.5%;
+      top:18.5%;
     }
 `
 export const DivNamaPengantin = styled.div`
@@ -215,17 +215,17 @@ export const DivFOTO = styled.div`
     @media only screen and (min-width:268px){
         width:150px;
         height:150px;
-        margin-top:-70px;
+        margin-top:-85px;
     }
     @media only screen and (min-width:768px){  
-        width:250px;
-        height:250px;
+        width:200px;
+        height:200px;
          margin-top:0px;
     }
     @media only screen and (min-width:1024px){
-      width:250px;
-        height:250px;
-        margin-top:0px;
+      width:200px;
+        height:200px;
+        margin-top:-20px;
     }
 `
 export const DivFOTO2 = styled.div`
@@ -233,19 +233,18 @@ export const DivFOTO2 = styled.div`
     top:10px;
     display:flex;
     align-items:center;
-    width:400px;
-    height:300px;
+    
     @media only screen and (min-width:268px){
-        width:250px;
-        height:200px;
+        width:235px;
+        height:180px;
     }
     @media only screen and (min-width:768px){  
-        width:400px;
-        height:300px;
+          width:320px;
+        height:240px;
     }
     @media only screen and (min-width:1024px){
-        width:400px;
-        height:300px;
+        width:320px;
+        height:240px;
     }
    
 `
@@ -267,19 +266,19 @@ export const DivKotakFOTO = styled.div`
     justify-content:center;
     align-items:center;
     @media only screen and (min-width:268px){
-        height:300px;
+        height:280px;
         padding:10px 0px;
         width:80vw; 
     }
     @media only screen and (min-width:768px){
-        height:380px;
+         height:330px; 
         padding:30px 0px;
-        width:400px; 
+        width:360px; 
     }
     @media only screen and (min-width:1024px){
-        height:380px;   
+        height:330px;   
         padding:30px 0px;
-        width:400px; 
+        width:360px; 
     }
 `
 

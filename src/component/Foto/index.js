@@ -23,22 +23,9 @@ const Foto = ()=>{
             </DivCelebrate>
             <DivFotoFlexContainer   >
             
-                <DivKotakFOTO className="muncul-kiri">
-                    <DivFOTO  src={NidzamImage} />
-                        <DivNamaPengantin2>NM</DivNamaPengantin2>
-                   
-                    <DivFOTO2 >
-                        <img src={Border1} style={{width:'100%',height:'100%'}} alt="border"></img>
-                    </DivFOTO2>
-                    <DivNAMA2>
-                        <DivNamaPengantin>Nidzamuddin Muzakki</DivNamaPengantin>
-                        <DivKeteranganKeluarga>Putra Kedua dari Keluarga</DivKeteranganKeluarga>
-                        <DivKeteranganNamaOrtu>Bapak Niz'am & Ibu Mutmaini</DivKeteranganNamaOrtu>
-
-                    </DivNAMA2>
-                </DivKotakFOTO>
                 
-                <DivKotakFOTO className="muncul-kanan">
+                
+                <DivKotakFOTO className="muncul-kiri">
                     <DivFOTO   src="https://ehv9nqzx9ct.exactdn.com/wp-content/uploads/elementor/thumbs/02-11-qok9i647r7ylen0i0i3sehs8ub3zfg983daw5zho00.png?strip=all&lossy=1&w=159&ssl=1" >
                     <DivNamaPengantin2>RS</DivNamaPengantin2>
                     </DivFOTO>
@@ -49,6 +36,20 @@ const Foto = ()=>{
                         <DivNamaPengantin>Rizqi Salsabila</DivNamaPengantin>
                         <DivKeteranganKeluarga>Putri Kedua dari Keluarga</DivKeteranganKeluarga>
                         <DivKeteranganNamaOrtu>Bapak Hanafi & Ibu Isti</DivKeteranganNamaOrtu>
+
+                    </DivNAMA2>
+                </DivKotakFOTO>
+                <DivKotakFOTO className="muncul-kanan">
+                    <DivFOTO  src={NidzamImage} />
+                        <DivNamaPengantin2>NM</DivNamaPengantin2>
+                   
+                    <DivFOTO2 >
+                        <img src={Border1} style={{width:'100%',height:'100%'}} alt="border"></img>
+                    </DivFOTO2>
+                    <DivNAMA2>
+                        <DivNamaPengantin>Nidzamuddin Muzakki</DivNamaPengantin>
+                        <DivKeteranganKeluarga>Putra Kedua dari Keluarga</DivKeteranganKeluarga>
+                        <DivKeteranganNamaOrtu>Bapak Niz'am & Ibu Mutmaini</DivKeteranganNamaOrtu>
 
                     </DivNAMA2>
                 </DivKotakFOTO>
