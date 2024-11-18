@@ -287,12 +287,12 @@ export const DIVPengantingRedirect = styled.div`
     position:absolute;
     opacity:0;
     @media only screen and (min-width:268px){
-        top:0%;
+        top:-20px;
     }
     @media only screen and (min-width:768px){
-        top:-100px;
+        top:-10px;
     }
     @media only screen and (min-width:1024px){
-        top:-100px;
+        top:-10px;
     }
 `
