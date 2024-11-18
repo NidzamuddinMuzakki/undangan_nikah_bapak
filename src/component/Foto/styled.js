@@ -251,7 +251,7 @@ export const DivFOTO2 = styled.div`
 `
 
 export const DivKotakFOTO = styled.div`
-    width:400px; 
+    
     position:relative;
     padding:30px 0px;
     oveflow:hidden;
@@ -269,14 +269,17 @@ export const DivKotakFOTO = styled.div`
     @media only screen and (min-width:268px){
         height:300px;
         padding:10px 0px;
+        width:80vw; 
     }
     @media only screen and (min-width:768px){
         height:380px;
         padding:30px 0px;
+        width:400px; 
     }
     @media only screen and (min-width:1024px){
         height:380px;   
         padding:30px 0px;
+        width:400px; 
     }
 `
 
