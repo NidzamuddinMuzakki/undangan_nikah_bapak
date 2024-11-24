@@ -27,7 +27,7 @@ const Cover = ({data,setStateClick})=>{
         <div style={{position:'relative',display:'flex', justifyContent:'center', alignItems:'center',width:'100vw',height:'100vh',marginBottom:data?'30px':'0px'}}>
             <CoverDiv>
                 <div style={{position:'absolute', opacity:0.5,top:10}}>
-                    <img style={{width:'500px'}} src={BurungGif}></img>
+                    <img alt="cip" style={{width:'500px'}} src={BurungGif}></img>
                 </div>
                 <BungaAtas>
                    
