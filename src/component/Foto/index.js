@@ -35,7 +35,7 @@ const Foto = ()=>{
                     <DivNAMA2>
                         <DivNamaPengantin>Rizqi Salsabila</DivNamaPengantin>
                         <DivKeteranganKeluarga>Putri Kedua dari Keluarga</DivKeteranganKeluarga>
-                        <DivKeteranganNamaOrtu>Bapak Hanafi & Ibu Isti</DivKeteranganNamaOrtu>
+                        <DivKeteranganNamaOrtu>Bapak Ahmad Hanafi & Ibu Isti</DivKeteranganNamaOrtu>
 
                     </DivNAMA2>
                 </DivKotakFOTO>
@@ -49,7 +49,7 @@ const Foto = ()=>{
                     <DivNAMA2>
                         <DivNamaPengantin>Nidzamuddin Muzakki</DivNamaPengantin>
                         <DivKeteranganKeluarga>Putra Kedua dari Keluarga</DivKeteranganKeluarga>
-                        <DivKeteranganNamaOrtu>Bapak Niz'am & Ibu Mutmaini</DivKeteranganNamaOrtu>
+                        <DivKeteranganNamaOrtu>Bapak Niz'am & Ibu Mutmaini Hamidah</DivKeteranganNamaOrtu>
 
                     </DivNAMA2>
                 </DivKotakFOTO>

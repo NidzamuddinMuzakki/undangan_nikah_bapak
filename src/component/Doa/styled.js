@@ -86,20 +86,20 @@ export const CoverDiv = styled.div`
     justify-content:center;
     align-items:center;
     
-    border-radius:40px;
+    border-radius:20px;
     border:5px solid white;
     @media only screen and (min-width:268px){
-        width:70vw;
-        height:500px;
+        width:75vw;
+        height:380px;
     }
     
     @media only screen and (min-width:768px){
         width:70vw;
-        height:70vh;
+        height:380px;
     }
     @media only screen and (min-width:1024px){
         width:700px;
-        height:80vh;
+        height:380px;
     }
         
 `
@@ -197,17 +197,18 @@ export const DivMohonMaaf = styled.div`
     color: #54595F;
     margin-top:25px;
     font-family: "Source Serif Pro", Sans-serif;
-    font-size: 14px;
+    font-size: 20px;
+    text-align:center;
     letter-spacing: 0;
 
     @media only screen and (min-width:268px){
-          font-size: 10px;
+          font-size: 16px;
     }
     @media only screen and (min-width:768px){
-          font-size: 14px;
+          font-size: 16px;
     }
     @media only screen and (min-width:1024px){
-         font-size: 14px;
+         font-size: 18px;
     }
 `
 

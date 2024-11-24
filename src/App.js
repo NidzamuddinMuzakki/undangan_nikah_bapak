@@ -5,6 +5,8 @@ import Foto from './component/Foto';
 import backgroundImage from './images/paper-1.png'
 import HitungMundurDiv from './component/HitungMundur';
 import DivTanggalNikah from './component/NikahTanggal';
+import DivOurGuft from './component/OurGift'
+import Doa from './component/Doa'
 function App() {
 
   
@@ -22,6 +24,10 @@ const [stateClick,setStateClick] = useState(0)
       {stateClick?<Foto data={stateClick} ></Foto>:""}
       {stateClick?<HitungMundurDiv></HitungMundurDiv>:""}
       {stateClick?<DivTanggalNikah ></DivTanggalNikah>:""}
+      {stateClick?<DivOurGuft ></DivOurGuft>:""}
+      {stateClick?<Doa ></Doa>:""}
+      
+
     </div>
   );
 }
