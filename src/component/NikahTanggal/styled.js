@@ -43,8 +43,7 @@ box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     margin-right: 0px;
     padding-top: 35px;
     padding-bottom: 25px;
-    padding-left: 20px;
-    padding-right: 20px;
+ 
     
      @media only screen and (min-width:268px){
        width:80vw;
@@ -54,6 +53,7 @@ box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     }
     @media only screen and (min-width:1024px){
        width:500px;
+       
     }
 `
 
