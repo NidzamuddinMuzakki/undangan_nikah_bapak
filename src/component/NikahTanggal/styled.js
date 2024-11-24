@@ -58,11 +58,12 @@ box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 `
 
 export const Title = styled.div`
-color: #C58815;
+   color: #C58815;
     font-family: "Croissant One", Sans-serif;
-    font-size: 35px;
+    font-size: 20px;
     font-weight: 500;
     text-transform: uppercase;
+   
     text-shadow: 3px 2px 0 rgba(54.00000000000002, 80.00000000000001, 113.00000000000006, .09);
 `
 
@@ -70,7 +71,7 @@ export const Tanggal = styled.div`
 margin-bottom: 0;
     color: #54595F;
     font-family: "Source Serif Pro", Sans-serif;
-    font-size: 18px;
+    font-size: 15px;
     font-weight: 500;
     letter-spacing: 0;
 `
@@ -78,7 +79,7 @@ margin-bottom: 0;
 export const ValueTanggal  = styled.div`
 color: #43638B;
     font-family: "Croissant One", Sans-serif;
-    font-size: 18px;
+    font-size: 15px;
     font-weight: 400;
     letter-spacing: -.5px;
 
