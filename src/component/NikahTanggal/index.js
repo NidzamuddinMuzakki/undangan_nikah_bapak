@@ -15,7 +15,7 @@ const DivTanggalNikah= ()=>{
             </BungaAtas>
             <AcaraResepsi className="muncul-kiri">
                 <div style={{position:'absolute', opacity:0.5,top:10}}>
-                    <img style={{width:'500px'}} src={BurungGif}></img>
+                    <img alt="cip" style={{width:'500px'}} src={BurungGif}></img>
                 </div>
                 <Title>Acara Resepsi</Title>
                 <Tanggal>Tanggal</Tanggal>

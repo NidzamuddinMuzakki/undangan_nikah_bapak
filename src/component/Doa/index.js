@@ -1,21 +1,18 @@
 import React from "react";
-import { FaRegEnvelopeOpen } from "react-icons/fa";
-import {BungaBawahImageDiv,BungaAtasImageDiv,BungaAtas,BungaBawah, DivNamaPengantin,DivMohonMaaf,CoverDiv,DivTheWedding,DivTanggal,DivAppreciate,DivTamuUNdangan,ABukaUndangan } from "./styled";
+
+import {BungaBawahImageDiv,BungaAtasImageDiv,BungaAtas,BungaBawah,DivMohonMaaf,CoverDiv } from "./styled";
 import BungaAtasImage from './../../images/Asset-6.png'
 import BungaBawahImage from './../../images/Asset-7.png'
-import { HashLink } from "react-router-hash-link";
+
 import BurungGif from './../../images/giphy-1-1.gif'
-import Audios from './../../audio/audio.mp3'
-import { useLocation } from "react-router-dom";
 
-const Doa = ({})=>{
- 
 
+const Doa = ()=>{
     return(
         <div className="zoom" style={{position:'relative',display:'flex',marginTop:'30px', justifyContent:'center', alignItems:'center',width:'100vw',height:'600px',marginBottom:'30px',}}>
             <CoverDiv>
                 <div style={{position:'absolute', opacity:0.5,top:10}}>
-                    <img style={{width:'500px'}} src={BurungGif}></img>
+                    <img alt="burung" style={{width:'500px'}} src={BurungGif}></img>
                 </div>
                 <BungaAtas>
                    
