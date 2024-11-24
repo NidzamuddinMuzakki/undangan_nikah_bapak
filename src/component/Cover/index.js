@@ -38,7 +38,7 @@ const Cover = ({data,setStateClick})=>{
                 <DivNamaPengantin>RIZQI & NIDZAM</DivNamaPengantin>
                 <DivAppreciate>Appreciate For Your Coming</DivAppreciate>
                 <DivTamuUNdangan>{dataParam?dataParam:"KELUARGA BESAR"}</DivTamuUNdangan>
-                {data?"":<HashLink style={{textDecoration:'none',position:'relative',zIndex:2}} smooth to={"/#pengantin"} onClick={()=>{
+                {data?"":<HashLink style={{textDecoration:'none',position:'relative',zIndex:2}} smooth to={`?name=${dataParam}/#pengantin`} onClick={()=>{
                     setStateClick(1)
                     const audio = new Audio(Audios)
     audio.load()
