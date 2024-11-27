@@ -43,10 +43,11 @@ box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     margin-right: 0px;
     padding-top: 35px;
     padding-bottom: 25px;
- 
+   padding-left:10px;
+   padding-right:10px;
     
      @media only screen and (min-width:268px){
-       width:80vw;
+       width:85vw;
     }
     @media only screen and (min-width:768px){
       width:500px;
@@ -60,7 +61,10 @@ box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 export const Title = styled.div`
    color: #C58815;
     font-family: "Croissant One", Sans-serif;
-    font-size: 20px;
+    font-size:35px;
+    width:100%;
+    text-align:center;
+  
     font-weight: 500;
     text-transform: uppercase;
    
@@ -68,10 +72,14 @@ export const Title = styled.div`
 `
 
 export const Tanggal = styled.div`
-margin-bottom: 0;
+margin-bottom: -10px;
+margin-top:-10px;
     color: #54595F;
     font-family: "Source Serif Pro", Sans-serif;
     font-size: 15px;
+      
+    width:100%;
+    text-align:center;
     font-weight: 500;
     letter-spacing: 0;
 `
@@ -81,6 +89,8 @@ color: #43638B;
     font-family: "Croissant One", Sans-serif;
     font-size: 15px;
     font-weight: 400;
+    width:100%;
+    text-align:center;
     letter-spacing: -.5px;
 
 `
@@ -139,7 +149,7 @@ export const DivButtonSimpanKalender = styled.div`
 export const BungaAtasImageDiv = styled.img`
    
     @media only screen and (min-width:268px){
-       width:400px;
+       width:300px;
     }
     @media only screen and (min-width:768px){
       width:400px;

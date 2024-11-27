@@ -7,6 +7,7 @@ import HitungMundurDiv from './component/HitungMundur';
 import DivTanggalNikah from './component/NikahTanggal';
 import DivOurGuft from './component/OurGift'
 import Doa from './component/Doa'
+import TerimaKasih from './component/TerimaKasih';
 function App() {
 
   
@@ -26,6 +27,7 @@ const [stateClick,setStateClick] = useState(0)
       {stateClick?<DivTanggalNikah ></DivTanggalNikah>:""}
       {stateClick?<DivOurGuft ></DivOurGuft>:""}
       {stateClick?<Doa ></Doa>:""}
+      {stateClick?<TerimaKasih></TerimaKasih>:""}
       
 
     </div>

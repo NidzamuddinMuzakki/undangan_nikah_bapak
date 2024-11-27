@@ -2,6 +2,7 @@ import React from "react";
 import { FaRegCalendarAlt } from "react-icons/fa";
 import {DivMap,DivButtonSimpanKalender ,DivContainerKotakTanggal,DivLineTanggal, DivTanggal,DivKotakTanggal, DivSpanNumber, DivSpanType } from "./styled";
 import { useEffect, useState } from "react";
+// import BackgroundImage from './../../images/01-19.png'
 const HitungMundurDiv = ()=>{
     const [timers, setTimers] = useState([]);
     const [newTimerTitle, setNewTimerTitle] = useState("Nidzam");
@@ -107,8 +108,8 @@ const HitungMundurDiv = ()=>{
   
     return(
         <div onLoad={()=>addTimer()} style={{backgroundColor:"#43638B", height:600, paddingTop:'25px',position:'relative', }}>
-            
-            <DivTanggal >
+          
+            <DivTanggal >   
                 <DivLineTanggal/>
                 SUNDAY, 12 JANUARI 2025
                 <DivLineTanggal/>

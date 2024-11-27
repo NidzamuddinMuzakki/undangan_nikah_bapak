@@ -1,5 +1,5 @@
 import React from "react";
-import {DIVPengantingRedirect,DivNamaPengantin2,DivKotakFOTO,DivNamaPengantin,DivKeteranganKeluarga,DivKeteranganNamaOrtu,DivNAMA2,DivFOTO,DivFOTO2,DivFotoFlexContainer,DivGreatPleasure,DivInviteYou,DivCelebrate,DivLineGreate} from './styled'
+import {DIVPengantingRedirect,DivNamaPengantin2,DivKotakFOTO,DivNamaPengantin,DivKeteranganKeluarga,DivKeteranganNamaOrtu,DivNAMA2,DivFOTO,DivFOTO2,DivFotoFlexContainer,DivGreatPleasure,DivInviteYou,DivCelebrate,DivLineGreate, DivFOTO3, DivNamaPengantin3, DivKotakFOTO2, DivFOTO4, DivNAMA20} from './styled'
 
 import Border1 from './../../images/02.png'
 import Border2 from './../../images/01.png'
@@ -33,26 +33,26 @@ const Foto = ()=>{
                         <img src={Border2} style={{width:'100%',height:'100%'}} alt="border"></img>
                     </DivFOTO2>
                     <DivNAMA2>
-                        <DivNamaPengantin>Rizqi Salsabila</DivNamaPengantin>
+                        <DivNamaPengantin>Rizqi Salsabila, S.E</DivNamaPengantin>
                         <DivKeteranganKeluarga>Putri Kedua dari Keluarga</DivKeteranganKeluarga>
-                        <DivKeteranganNamaOrtu>Bapak Ahmad Hanafi & Ibu Isti</DivKeteranganNamaOrtu>
+                        <DivKeteranganNamaOrtu>Bapak Drs. H. Ahmad Hanafi, M.SI & Ibu Siti Istiqoriyah, S. Ag</DivKeteranganNamaOrtu>
 
                     </DivNAMA2>
                 </DivKotakFOTO>
-                <DivKotakFOTO className="muncul-kanan">
-                    <DivFOTO  src={NidzamImage} />
-                        <DivNamaPengantin2>NM</DivNamaPengantin2>
+                <DivKotakFOTO2 className="muncul-kanan">
+                    <DivFOTO4  src={NidzamImage} />
+                        <DivNamaPengantin3>NM</DivNamaPengantin3>
                    
-                    <DivFOTO2 >
+                    <DivFOTO3 >
                         <img src={Border1} style={{width:'100%',height:'100%'}} alt="border"></img>
-                    </DivFOTO2>
-                    <DivNAMA2>
-                        <DivNamaPengantin>Nidzamuddin Muzakki</DivNamaPengantin>
+                    </DivFOTO3>
+                    <DivNAMA20>
+                        <DivNamaPengantin>Nidzamuddin Muzakki, S.Kom</DivNamaPengantin>
                         <DivKeteranganKeluarga>Putra Kedua dari Keluarga</DivKeteranganKeluarga>
-                        <DivKeteranganNamaOrtu>Bapak Niz'am & Ibu Mutmaini Hamidah</DivKeteranganNamaOrtu>
+                        <DivKeteranganNamaOrtu>Bapak Ir. H. Niz'am & Ir. Hj. Ibu Mutmaini Hamidah S.Kom, MMA</DivKeteranganNamaOrtu>
 
-                    </DivNAMA2>
-                </DivKotakFOTO>
+                    </DivNAMA20>
+                </DivKotakFOTO2>
                 {/* <DivFotoFlexContainer className="muncul-kiri" id="pengantin1">
 
                 <DivNAMA>

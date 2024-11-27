@@ -151,7 +151,8 @@ export const DivAppreciate = styled.div`
 
 export const DivTamuUNdangan = styled.div`
     margin: 20px 0 0 0;
-    width:300px;
+    width:auto;
+    min-width:100px;
     display:flex;
     justify-content:center;
     padding: 8px 2px 8px 2px;
