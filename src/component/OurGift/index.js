@@ -6,7 +6,8 @@ import Bca from './../../images/bca.png'
 import { FaCommentAlt, FaCopy } from "react-icons/fa";
 import { IoTimeOutline } from "react-icons/io5";
 import app from "./../../config/index";
-import { getDatabase, ref, set, child, get } from "firebase/database";
+import { getDatabase, ref, set, child, get} from "firebase/database";
+
 import { getDeviceId } from "../../uuid";
 import {  toast } from 'react-toastify';
 
@@ -53,10 +54,14 @@ const OurGift = ({loading, setLoading})=>{
     useEffect(()=>{
         const fetchData = async () => {
             const db = getDatabase(app);
-            const dbRef =ref(db, "undanganNikah/comment");
+            const dbRef =  ref(db, "undanganNikah/comment");
             const snapshot = await get(dbRef);
             if(snapshot.exists()) {
-                setDataComment(Object.values(snapshot.val()));
+                let  arr = Object.values(snapshot.val())
+                arr.sort(function(a, b) {
+                    return  new Date(b.created_at) - new Date(a.created_at) ;
+                });
+                setDataComment(arr);
             } else {
               console.log("error get data")
             }
@@ -108,7 +113,7 @@ const OurGift = ({loading, setLoading})=>{
        
         // // console.log(state)
     }
-    console.log(dataComment,"nidzam ganteng")
+    // console.log(dataComment,"nidzam ganteng")
     return(
         <div  style={{backgroundColor:"#43638B", height:'auto', paddingTop:'25px',paddingBottom:'25px',position:'relative', }}>
              <DivTanggal className="muncul" style={{fontSize:'28px'}} >
