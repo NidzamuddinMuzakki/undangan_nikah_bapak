@@ -8,11 +8,13 @@ import DivTanggalNikah from './component/NikahTanggal';
 import DivOurGuft from './component/OurGift'
 import Doa from './component/Doa'
 import TerimaKasih from './component/TerimaKasih';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 function App() {
 
   
 const [stateClick,setStateClick] = useState(0)
-
+  const [loading, setLoading] = useState(false)
 
   return (
     <div id="containerall"   style={{position:'relative',backgroundImage:`url(${backgroundImage})`,overflowX:'hidden',height:'100%', overflowY:`${stateClick===1?'auto':'hidden'}`}} >  
@@ -25,11 +27,12 @@ const [stateClick,setStateClick] = useState(0)
       {stateClick?<Foto data={stateClick} ></Foto>:""}
       {stateClick?<HitungMundurDiv></HitungMundurDiv>:""}
       {stateClick?<DivTanggalNikah ></DivTanggalNikah>:""}
-      {stateClick?<DivOurGuft ></DivOurGuft>:""}
+      {stateClick?<DivOurGuft loading={loading} setLoading={setLoading}></DivOurGuft>:""}
       {stateClick?<Doa ></Doa>:""}
       {stateClick?<TerimaKasih></TerimaKasih>:""}
       
-
+        <ToastContainer position="bottom-right"
+        autoClose={1000}></ToastContainer>
     </div>
   );
 }

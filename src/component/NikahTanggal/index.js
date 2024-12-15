@@ -4,6 +4,7 @@ import { FaRegCalendarAlt } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
 import BungaAtasIMG from './../../images/Asset-6.png'
 import BurungGif from './../../images/giphy-1-1.gif'
+
 const DivTanggalNikah= ()=>{
     return(
         <DivContainerTanggal>
@@ -30,12 +31,13 @@ const DivTanggalNikah= ()=>{
                 <div style={{marginTop:'0px'}}></div>
 
                 <ButtonDiv> 
-                    <DivButtonSimpanKalender>
+                    <DivButtonSimpanKalender  target="_blank"  href="https://maps.app.goo.gl/NXiDjaA6TjFugqHNA">
                         <FaLocationDot style={{fontSize:'17px'}}></FaLocationDot>
                         Kunjungi Lokasi
                     </DivButtonSimpanKalender>
                     <div style={{marginTop:'30xp',position:'relative',height:'20px'}}></div>
-                    <DivButtonSimpanKalender>
+                    <DivButtonSimpanKalender target="_blank" href="https://calendar.google.com/calendar/u/0/r/eventedit?text=The+Wedding+Of:+Rizqi+%26amp;+Nidzam&dates=20250111T01:00:00.000Z%2F20250111T05:00:00.000Z">
+                 
                         <FaRegCalendarAlt style={{fontSize:'17px'}}></FaRegCalendarAlt>
                         Simpan KE KALENDER
                     </DivButtonSimpanKalender>
@@ -53,19 +55,19 @@ const DivTanggalNikah= ()=>{
                 <ValueTanggal>Minggu, 12 Januari 2025</ValueTanggal>
                 <div style={{marginTop:'0px'}}></div>
                 <Tanggal>Waktu</Tanggal>
-                <ValueTanggal>13.00 - 17.30 WIB</ValueTanggal>
+                <ValueTanggal>13.30 - 17.30 WIB</ValueTanggal>
                 <div style={{marginTop:'0px'}}></div>
                 <Tanggal>Tempat</Tanggal>
                 <ValueTanggal>Aula Masjid Mujahiddin Pontianak</ValueTanggal>
                 <div style={{marginTop:'0px'}}></div>
 
                 <ButtonDiv> 
-                    <DivButtonSimpanKalender>
+                    <DivButtonSimpanKalender target="_blank"  href="https://maps.app.goo.gl/NXiDjaA6TjFugqHNA">
                         <FaLocationDot style={{fontSize:'17px'}}></FaLocationDot>
                         Kunjungi Lokasi
                     </DivButtonSimpanKalender>
                     <div style={{marginTop:'30xp',position:'relative',height:'20px'}}></div>
-                    <DivButtonSimpanKalender>
+                    <DivButtonSimpanKalender target="_blank" href="https://calendar.google.com/calendar/u/0/r/eventedit?text=The+Wedding+Of:+Rizqi+%26amp;+Nidzam&dates=20250112T06:40:00.000Z%2F20250112T10:40:00.000Z">
                         <FaRegCalendarAlt style={{fontSize:'17px'}}></FaRegCalendarAlt>
                         Simpan KE KALENDER
                     </DivButtonSimpanKalender>

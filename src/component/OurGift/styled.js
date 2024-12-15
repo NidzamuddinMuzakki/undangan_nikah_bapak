@@ -181,7 +181,7 @@ border-radius:5px;
     min-height: 5em !important;
     margin: 0 !important;
     padding: 4px 6px;
-    box-shadow: none;
+   
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -194,6 +194,7 @@ border-radius:5px;
     resize: vertical !important;
     background: #fff;
     color: #44525f;
+
     vertical-align: top;
    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
 `
@@ -226,7 +227,8 @@ export const InputHadir = styled.select`
 `
 
 export const AllComment = styled.div`
-    height:0px;
+   
+    height:auto;
     max-height:300px;
     overflow-x:hidden;
     overflow-y:auto;

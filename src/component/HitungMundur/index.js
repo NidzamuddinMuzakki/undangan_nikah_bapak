@@ -162,7 +162,7 @@ const HitungMundurDiv = ()=>{
             </DivContainerKotakTanggal>
             <div style={{display:'flex', justifyContent:'center'}}>
 
-                <DivButtonSimpanKalender>
+                <DivButtonSimpanKalender target="_blank" href="https://calendar.google.com/calendar/u/0/r/eventedit?text=The+Wedding+Of:+Rizqi+%26amp;+Nidzam&dates=20250112T06:40:00.000Z%2F20250112T10:40:00.000Z">
                     <FaRegCalendarAlt style={{fontSize:'17px'}}></FaRegCalendarAlt>
                     <span>SIMPAN KE KALENDER</span>
                 </DivButtonSimpanKalender>

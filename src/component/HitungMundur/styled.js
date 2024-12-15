@@ -100,8 +100,9 @@ export const DivSpanType = styled.div`
     }
 `
 
-export const DivButtonSimpanKalender = styled.div`
+export const DivButtonSimpanKalender = styled.a`
     cursor:pointer;
+    text-decoration:none;
     background-color: #C89556;
     font-family: "Source Serif Pro", Sans-serif;
     font-size: 12px;

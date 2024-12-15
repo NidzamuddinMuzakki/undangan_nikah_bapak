@@ -1,13 +1,114 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {AllComment,InputHadir,InputUcapan,InputNama,DivComment,DivLineTanggal, DivTanggal,DivAtm ,DivAtasNama, ValueKartu,DivButtonSimpanKalender, DivHeader, DivAllComment, DivCommentNama, DivCommentNamaWaktu, DivCommentUcapan} from "./styled";
 import CIP from './../../images/chip-atm-undangan.png'
 import BSI from './../../images/bank-syariah-indonesia-ist_169-removebg-preview.png'
-import Mandiri from './../../images/png-clipart-logo-bank-mandiri-credit-card-bank-text-logo-removebg-preview.png'
+import Bca from './../../images/bca.png'
 import { FaCommentAlt, FaCopy } from "react-icons/fa";
 import { IoTimeOutline } from "react-icons/io5";
+import app from "./../../config/index";
+import { getDatabase, ref, set, child, get } from "firebase/database";
+import { getDeviceId } from "../../uuid";
+import {  toast } from 'react-toastify';
 
-const OurGift = ()=>{
+
+const OurGift = ({loading, setLoading})=>{
+    const uuidNow = getDeviceId()
+    function timeSince(date) {
+
+        var seconds = Math.floor((new Date() - date) / 1000);
+      
+        var interval = seconds / 31536000;
+      
+        if (interval > 1) {
+          return Math.floor(interval) + " years";
+        }
+        interval = seconds / 2592000;
+        if (interval > 1) {
+          return Math.floor(interval) + " months";
+        }
+        interval = seconds / 86400;
+        if (interval > 1) {
+          return Math.floor(interval) + " days";
+        }
+        interval = seconds / 3600;
+        if (interval > 1) {
+          return Math.floor(interval) + " hours";
+        }
+        interval = seconds / 60;
+        if (interval > 1) {
+          return Math.floor(interval) + " minutes";
+        }
+        return Math.floor(seconds) + " seconds";
+      }
+      
+
     const [show,setShow ]= useState(false)
+    const [dataComment, setDataComment] = useState([])
+  
+    const [state, setState] = useState({
+        konfirmasi:"",
+        ucapan:"",
+        nama:""
+    })
+    useEffect(()=>{
+        const fetchData = async () => {
+            const db = getDatabase(app);
+            const dbRef =ref(db, "undanganNikah/comment");
+            const snapshot = await get(dbRef);
+            if(snapshot.exists()) {
+                setDataComment(Object.values(snapshot.val()));
+            } else {
+              console.log("error get data")
+            }
+          }
+        fetchData()
+    },[loading,setLoading])
+
+    const handleChange = (e)=>{
+        setState((da)=>{
+            return({...da,[e.target.name]:e.target.value})
+        })
+    }
+    const handleClickSubmit = ()=>{
+        
+        const db = getDatabase(app);
+        setLoading(true)
+        get(child(ref(db, "undanganNikah/comment/"),uuidNow)).then((snap)=>{
+            if(snap.exists()){
+                setLoading(false)
+                toast.error("Anda Sudah Mengirim Ucapan");
+            }else{
+                
+                const newDocRef = child(ref(db, "undanganNikah/comment"),uuidNow);
+                let ISO_8601_FORMAT = new Date();
+
+                let now =  ISO_8601_FORMAT.toISOString()
+                
+                set(newDocRef, {
+                    uuid:uuidNow,
+                    nama: state.nama,
+                    ucapan: state.ucapan,
+                    konfirmasi:state.konfirmasi,
+                    created_at:now,
+                }).then( () => {
+                    toast.success("Sukses Kirim Ucapan");
+                }).catch((error) => {
+                    // console.log(error)
+                    toast.error("Gagal Kirim Ucapan");
+                }).finally(()=>{
+                    setState({
+                        konfirmasi:"",
+                        ucapan:"",
+                        nama:""
+                    })
+                    setLoading(false)
+                })
+            }
+        })
+       
+        // // console.log(state)
+    }
+    console.log(dataComment,"nidzam ganteng")
     return(
         <div  style={{backgroundColor:"#43638B", height:'auto', paddingTop:'25px',paddingBottom:'25px',position:'relative', }}>
              <DivTanggal className="muncul" style={{fontSize:'28px'}} >
@@ -19,19 +120,19 @@ const OurGift = ()=>{
             <div style={{height:'30px'}}></div>
             <div style={{width:'100vw',height:'auto', display:'flex', justifyContent:'center'}}>
             <DivComment className="zoom">
-                <DivHeader onClick={()=>{setShow(!show)}}><FaCommentAlt></FaCommentAlt> {0} Comments</DivHeader>
+                <DivHeader onClick={()=>{dataComment?.length?setShow(!show):setShow(false)}}><FaCommentAlt></FaCommentAlt> {dataComment?.length} Comments</DivHeader>
                 <div style={{height:'auto'}}>
                     <div style={{margin:'20px'}}>
-                        <InputNama type="text" name="nama"  placeholder="Nama" placholde></InputNama>
+                        <InputNama onChange={handleChange} value={state.nama} type="text" name="nama"  placeholder="Nama" placholde></InputNama>
                         <div style={{height:'6px'}}></div>
-                        <InputUcapan type="text" name="ucapan" placeholder="Ucapan"></InputUcapan>
+                        <InputUcapan onChange={handleChange} value={state.ucapan} type="text" name="ucapan" placeholder="Ucapan"></InputUcapan>
                         <div style={{height:'10px'}}></div>
-                        <InputHadir name="konfirmasi">
+                        <InputHadir onChange={handleChange} value={state.konfirmasi} name="konfirmasi">
                             <option  value="" disabled selected="">Konfirmasi Kehadiran</option>
                             <option  value="Hadir">Hadir</option>
                             <option value="Tidak Hadir">Tidak Hadir</option>
                         </InputHadir>
-                        <div style={{display:'flex', marginTop:'20px',justifyContent:"end"}}>
+                        <div onClick={()=>{state.nama && state.ucapan && state.konfirmasi?handleClickSubmit():toast.error("Isi data terlebih dahulu")}} style={{display:'flex', marginTop:'20px',justifyContent:"end"}}>
                             <DivButtonSimpanKalender style={{ boxShadow: "rgba(0, 0, 0, 0.15) 0px 2px 8px"}}>
                        
                             {/* <IoSend color=""></IoSend> */}
@@ -39,7 +140,31 @@ const OurGift = ()=>{
                             </DivButtonSimpanKalender>
                         </div>
 
-                        <AllComment style={{marginTop:show?'30px':'0px',height:show?'300px':'0px',borderTop:show?'1px solid  #d5deea':'0px solid  #d5deea'}}>
+                        <AllComment style={{marginTop:show?'30px':'0px',height:show?'auto':'0px',borderTop:show?'1px solid  #d5deea':'0px solid  #d5deea'}}>
+                            {dataComment?.length?dataComment.map((val, key) =>(
+                            <DivAllComment key={key}>
+                                   <DivCommentNama>{val.nama}
+                                        <DivCommentNamaWaktu>
+                                            <IoTimeOutline></IoTimeOutline>
+                                            {timeSince(new Date(val.created_at))}
+                                            {/* 1 hour ago {Dat().valueOf()} */}
+                                        </DivCommentNamaWaktu>
+                                    </DivCommentNama> 
+                                    <DivCommentNamaWaktu>({val.konfirmasi})</DivCommentNamaWaktu>
+                                    <DivCommentUcapan>{val.ucapan}</DivCommentUcapan>
+                            </DivAllComment>
+                             ))
+                            :""}
+
+                            {/* <DivAllComment>
+                                   <DivCommentNama>Nidzam
+                                        <DivCommentNamaWaktu>
+                                            <IoTimeOutline></IoTimeOutline>
+                                            1 hour ago
+                                        </DivCommentNamaWaktu>
+                                    </DivCommentNama> 
+                                    <DivCommentUcapan>asasasa</DivCommentUcapan>
+                            </DivAllComment>
                             <DivAllComment>
                                    <DivCommentNama>Nidzam
                                         <DivCommentNamaWaktu>
@@ -47,7 +172,16 @@ const OurGift = ()=>{
                                             1 hour ago
                                         </DivCommentNamaWaktu>
                                     </DivCommentNama> 
-                                    <DivCommentUcapan>asasasasaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</DivCommentUcapan>
+                                    <DivCommentUcapan>asasasa</DivCommentUcapan>
+                            </DivAllComment>
+                            <DivAllComment>
+                                   <DivCommentNama>Nidzam
+                                        <DivCommentNamaWaktu>
+                                            <IoTimeOutline></IoTimeOutline>
+                                            1 hour ago
+                                        </DivCommentNamaWaktu>
+                                    </DivCommentNama> 
+                                    <DivCommentUcapan>asasasa</DivCommentUcapan>
                             </DivAllComment>
 
                             <DivAllComment>
@@ -76,35 +210,7 @@ const OurGift = ()=>{
                                         </DivCommentNamaWaktu>
                                     </DivCommentNama> 
                                     <DivCommentUcapan>asasasa</DivCommentUcapan>
-                            </DivAllComment>
-
-                            <DivAllComment>
-                                   <DivCommentNama>Nidzam
-                                        <DivCommentNamaWaktu>
-                                            <IoTimeOutline></IoTimeOutline>
-                                            1 hour ago
-                                        </DivCommentNamaWaktu>
-                                    </DivCommentNama> 
-                                    <DivCommentUcapan>asasasa</DivCommentUcapan>
-                            </DivAllComment>
-                            <DivAllComment>
-                                   <DivCommentNama>Nidzam
-                                        <DivCommentNamaWaktu>
-                                            <IoTimeOutline></IoTimeOutline>
-                                            1 hour ago
-                                        </DivCommentNamaWaktu>
-                                    </DivCommentNama> 
-                                    <DivCommentUcapan>asasasa</DivCommentUcapan>
-                            </DivAllComment>
-                            <DivAllComment>
-                                   <DivCommentNama>Nidzam
-                                        <DivCommentNamaWaktu>
-                                            <IoTimeOutline></IoTimeOutline>
-                                            1 hour ago
-                                        </DivCommentNamaWaktu>
-                                    </DivCommentNama> 
-                                    <DivCommentUcapan>asasasa</DivCommentUcapan>
-                            </DivAllComment>
+                            </DivAllComment> */}
                         </AllComment>
                        
                     </div>
@@ -123,32 +229,32 @@ const OurGift = ()=>{
             <div style={{marginTop:'30px',display:'flex',justifyContent:'center',alignItems:'center',flexDirection:'column'}}>
 
                 <DivAtm  className="zoom">
-                    <div style={{display:'flex',justifyContent:'end',background:'',marginRight:'-10px',marginTop:'-5px'}}>
-                        <img alt="bsi" style={{width:'200px'}} src={BSI}></img>
+                    <div style={{display:'flex',justifyContent:'end',background:'',marginRight:'40px',marginTop:'-5px'}}>
+                        <img alt="bsi" style={{width:'120px'}} src={Bca}></img>
                     </div>
                     <div style={{marginLeft:'30px',marginTop:'-55px'}}>
 
                     <img alt="cip" src={CIP} width={60} ></img>
                     </div>
                     <DivAtasNama>AN Rizqi Salsabila</DivAtasNama>
-                    <ValueKartu>828323272783232</ValueKartu>
+                    <ValueKartu>0293018747</ValueKartu>
                     <div  style={{position:'absolute',display:'flex',justifyContent:'end',background:'',right:'20px',bottom:'15px'}}>
                         
-                        <DivButtonSimpanKalender>
+                        <DivButtonSimpanKalender  onClick={() => { toast.success("Berhasil Salin");navigator.clipboard.writeText("0293018747")}}>
                         <FaCopy color=""></FaCopy>
                             Salin</DivButtonSimpanKalender>
                     </div>
                 </DivAtm>
                 <div style={{height:'30px'}}></div>
                 <DivAtm className="muncul-kanan">
-                    <div style={{display:'flex',justifyContent:'end',background:'',paddingRight:'20px',paddingTop:'30px'}}>
-                        <img alt="mandiri" style={{width:'120px'}} src={Mandiri}></img>
+                    <div style={{display:'flex',justifyContent:'end',background:'',marginRight:'0px',marginTop:'-5px'}}>
+                        <img alt="mandiri" style={{width:'200px'}} src={BSI}></img>
                     </div>
-                    <img  alt="cip" src={CIP} width={60} style={{marginLeft:'30px',marginTop:'-20px'}}></img>
+                    <img  alt="cip" src={CIP} width={60} style={{marginLeft:'30px',marginTop:'-60px'}}></img>
                     <DivAtasNama>AN Nidzamuddin Muzakki</DivAtasNama>
-                    <ValueKartu>828323272783232</ValueKartu>
+                    <ValueKartu>7282531978</ValueKartu>
                     <div  style={{position:'absolute',display:'flex',justifyContent:'end',background:'',right:'20px',bottom:'15px'}}>
-                        <DivButtonSimpanKalender>
+                        <DivButtonSimpanKalender onClick={() => { toast.success("Berhasil Salin");navigator.clipboard.writeText("7282531978")}}>
                         <FaCopy color=""></FaCopy>
                             Salin</DivButtonSimpanKalender>
                     </div>
