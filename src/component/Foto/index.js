@@ -49,7 +49,7 @@ const Foto = ()=>{
                     <DivNAMA20>
                         <DivNamaPengantin>Nidzamuddin Muzakki, S.Kom</DivNamaPengantin>
                         <DivKeteranganKeluarga>Putra Kedua dari Keluarga</DivKeteranganKeluarga>
-                        <DivKeteranganNamaOrtu>Bapak Ir. H. Niz'am & Ir. Hj. Ibu Mutmaini Hamidah S.Kom, MMA</DivKeteranganNamaOrtu>
+                        <DivKeteranganNamaOrtu>Bapak Ir. H. Niz'am & Ibu Ir. Hj. Mutmaini Hamidah S.Kom, MMA</DivKeteranganNamaOrtu>
 
                     </DivNAMA20>
                 </DivKotakFOTO2>

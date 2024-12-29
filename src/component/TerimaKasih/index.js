@@ -1,20 +1,26 @@
-import {ImageKBlend,DivLineTanggal,ImageK2,DivTanggal,DivTanggal1, DivTerimaKasih,ImageK, DivTanggal3} from './styled'
+import {DivSampaiJumpa,ImageKBlend,DivLineTanggal,ImageK2,DivTanggal,DivTanggal1, DivTerimaKasih,ImageK, DivTanggal3, DivAtasKehadiran, DivAtasKehadiranSub} from './styled'
 import Image1 from './../../images/02-21.png'
 import Image2 from './../../images/03-12.png'
 import IMage3 from './../../images/360_F_391976995_l4pRVLGFJHsqa2ZCY7LBknYVhKuwH6Vs-removebg-preview.png'
 const TerimaKasih =()=>{
     return(
         <div style={{padding:'',background:'#43648c',display:'flex',alignItems:'center',flexDirection:'column'}}>
+            
+          
+          
           <DivTerimaKasih>
             <div style={{height:'10px'}}></div>
-            <DivTanggal className='zoom'>
-                <DivLineTanggal/>
+            <DivTanggal style={{width:'95%'}}  className='zoom'>
+                <DivLineTanggal style={{width:'10%'}}/>
                 Terima Kasih
-                <DivLineTanggal/>
+                <DivLineTanggal style={{width:'10%'}}/>
 
             </DivTanggal>
             <div style={{height:'10px'}}></div>
 
+            <DivAtasKehadiran className='zoom'>Atas Kehadiran & Doa Restunya</DivAtasKehadiran>
+            <DivAtasKehadiranSub className='muncul'>Merupakan suatu kehormatan dan kebahagiaan bagi kami sekeluarga apabila Bapak/Ibu/Saudara/i berkenan hadir untuk memberikan doa restu kepada kedua mempelai. Atas kehadiran serta doa restu, kami ucapkan terima kasih.</DivAtasKehadiranSub>
+            <DivSampaiJumpa className='zoom'>Sampai Jumpa di Hari Bahagia Kami,</DivSampaiJumpa>
             <div style={{display:'flex', alignItems:'center',justifyContent:'space-around'}}>
 
                 <ImageK2 alt="a"  src={Image1} className='muncul-kanan'></ImageK2>

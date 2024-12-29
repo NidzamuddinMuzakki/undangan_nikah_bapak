@@ -2,9 +2,76 @@ import styled from "styled-components";
 
 import IMage3 from './../../images/360_F_391976995_l4pRVLGFJHsqa2ZCY7LBknYVhKuwH6Vs-removebg-preview.png'
 
+export const DivAtasKehadiran = styled.div`
+    color: white;
+    text-align:center;
+    font-family: "Croissant One", Sans-serif;
+    
+    font-weight: 500;
+    text-transform: uppercase;
+    text-shadow: 0 6px 6px rgb(0 0 0 / .19);
+    margin-top:20px;
+    @media only screen and (min-width:268px){
+        font-size: 15px;
+    }
+    @media only screen and (min-width:768px){
+        font-size: 15px;
+    }
+    @media only screen and (min-width:1024px){
+        font-size: 15px;
+    }
+    
+`
+
+export const DivAtasKehadiranSub = styled.div`
+    color:white;
+    text-align:center;
+    margin-top:10px;
+    margin-bottom:20px;
+    width:80%;
+  
+    font-weight: 500;
+    font-family: "Source Serif Pro", Sans-serif;
+    text-shadow: 0 6px 6px rgb(0 0 0 / .19);
+
+    @media only screen and (min-width:268px){
+        font-size: 13px;
+    }
+    @media only screen and (min-width:768px){
+        font-size: 13px;
+    }
+    @media only screen and (min-width:1024px){
+        font-size: 13px;
+    }
+    
+`
+
+export const DivSampaiJumpa = styled.div`
+    color:white;
+    text-align:center;
+    margin-top:10px;
+    margin-bottom:20px;
+    width:90%;
+    font-weight: 500;
+    font-family: "Source Serif Pro", Sans-serif;
+    text-shadow: 0 6px 6px rgb(0 0 0 / .19);
+
+    @media only screen and (min-width:268px){
+        font-size: 13px;
+    }
+    @media only screen and (min-width:768px){
+        font-size: 13px;
+    }
+    @media only screen and (min-width:1024px){
+        font-size: 13px;
+    }
+    
+`
+
+
 export const DivTerimaKasih = styled.div`
     width:85vw;
-   border-radius:10px;
+    border-radius:10px;
     background: rgb(0 0 0 / .1);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);

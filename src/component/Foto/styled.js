@@ -27,6 +27,10 @@ export const DivGreatPleasure = styled.div`
     font-size: 18px;
     font-weight: 300;
     @media only screen and (min-width:268px){
+       margin-top:2vh;
+       font-size: 15px;
+    }
+    @media only screen and (min-width:380px){
        margin-top:-10vh;
        font-size: 18px;
     }

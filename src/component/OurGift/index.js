@@ -14,6 +14,7 @@ import {  toast } from 'react-toastify';
 
 const OurGift = ({loading, setLoading})=>{
     const uuidNow = getDeviceId()
+    
     function timeSince(date) {
 
         var seconds = Math.floor((new Date() - date) / 1000);
