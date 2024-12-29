@@ -11,7 +11,17 @@ import { getDatabase, ref, set, child, get} from "firebase/database";
 import { getDeviceId } from "../../uuid";
 import {  toast } from 'react-toastify';
 
+function ltrim(str) {
+    if(!str) return str;
+    return str.replace(/^\s+/g, '');
+  }
 
+  function rtrim(str) {
+    if(!str) return str;
+    return str.replace(/\s+$/g, '');
+  }
+
+ var nidzam =  new RegExp("^[A-Za-z0-9? ,.]+$");
 const OurGift = ({loading, setLoading})=>{
     const uuidNow = getDeviceId()
     
@@ -76,6 +86,39 @@ const OurGift = ({loading, setLoading})=>{
         })
     }
     const handleClickSubmit = ()=>{
+        var name = state.nama
+        var ucapan = state.ucapan
+
+        name = ltrim(name)
+        name = rtrim(name)
+
+        ucapan = ltrim(ucapan)
+        ucapan = rtrim(ucapan)
+
+        if(ucapan==="" || name===""){
+            toast.error("Isi data terlebih dahulu")
+            return
+        }
+
+        if(!nidzam.test(ucapan)){
+            toast.error("Ucapan Hanya Boleh aplhanum space titik dan koma")
+            return
+        }
+        if(!nidzam.test(name)){
+            toast.error("Nama Hanya Boleh aplhanum space titik dan koma")
+            return
+        }
+        if(name.length>100){
+            toast.error("Nama Hanya 100 karakter")
+            return
+        }
+
+        if(ucapan.length>400){
+            toast.error("Ucapan Hanya 400 karakter")
+            return
+        }
+
+       
         
         const db = getDatabase(app);
         setLoading(true)
@@ -92,8 +135,8 @@ const OurGift = ({loading, setLoading})=>{
                 
                 set(newDocRef, {
                     uuid:uuidNow,
-                    nama: state.nama,
-                    ucapan: state.ucapan,
+                    nama: name,
+                    ucapan: ucapan,
                     konfirmasi:state.konfirmasi,
                     created_at:now,
                 }).then( () => {
