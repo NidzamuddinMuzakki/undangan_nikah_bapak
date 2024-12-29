@@ -11,9 +11,9 @@ const TerimaKasih =()=>{
           <DivTerimaKasih>
             <div style={{height:'10px'}}></div>
             <DivTanggal style={{width:'95%'}}  className='zoom'>
-                <DivLineTanggal style={{width:'10%'}}/>
+                <DivLineTanggal style={{width:'13.1%'}}/>
                 Terima Kasih
-                <DivLineTanggal style={{width:'10%'}}/>
+                <DivLineTanggal style={{width:'13.1%'}}/>
 
             </DivTanggal>
             <div style={{height:'10px'}}></div>
