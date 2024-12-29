@@ -6,19 +6,19 @@ export const DivAtasKehadiran = styled.div`
     color: white;
     text-align:center;
     font-family: "Croissant One", Sans-serif;
-    
+    width:95%;
     font-weight: 500;
     text-transform: uppercase;
     text-shadow: 0 6px 6px rgb(0 0 0 / .19);
     margin-top:20px;
     @media only screen and (min-width:268px){
-        font-size: 15px;
+        font-size: 10px;
     }
     @media only screen and (min-width:768px){
-        font-size: 15px;
+        font-size: 10px;
     }
     @media only screen and (min-width:1024px){
-        font-size: 15px;
+        font-size: 10px;
     }
     
 `
@@ -26,22 +26,22 @@ export const DivAtasKehadiran = styled.div`
 export const DivAtasKehadiranSub = styled.div`
     color:white;
     text-align:center;
-    margin-top:10px;
+    margin-top:20px;
     margin-bottom:20px;
-    width:80%;
+    width:95%;
   
     font-weight: 500;
     font-family: "Source Serif Pro", Sans-serif;
     text-shadow: 0 6px 6px rgb(0 0 0 / .19);
 
     @media only screen and (min-width:268px){
-        font-size: 13px;
+        font-size: 9px;
     }
     @media only screen and (min-width:768px){
-        font-size: 13px;
+        font-size: 9px;
     }
     @media only screen and (min-width:1024px){
-        font-size: 13px;
+        font-size: 9px;
     }
     
 `
@@ -57,13 +57,13 @@ export const DivSampaiJumpa = styled.div`
     text-shadow: 0 6px 6px rgb(0 0 0 / .19);
 
     @media only screen and (min-width:268px){
-        font-size: 13px;
+        font-size: 9.5px;
     }
     @media only screen and (min-width:768px){
-        font-size: 13px;
+        font-size: 9.5px;
     }
     @media only screen and (min-width:1024px){
-        font-size: 13px;
+        font-size: 9.5px;
     }
     
 `
