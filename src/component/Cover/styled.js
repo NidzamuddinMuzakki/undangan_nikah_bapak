@@ -163,6 +163,7 @@ export const DivTamuUNdangan = styled.div`
     font-family: "Crimson Pro", Sans-serif;
     font-size: 20px;
     font-weight: 500;
+    text-align:center;
 `
 
 export const ABukaUndangan = styled.div`
