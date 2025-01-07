@@ -19,6 +19,7 @@ function App() {
 const [stateClick,setStateClick] = useState(0)
   const [loading, setLoading] = useState(false)
 
+  
   return (
     <div id="containerall"   style={{position:'relative',backgroundImage:`url(${backgroundImage})`,overflowX:'hidden',height:'100%', overflowY:`${stateClick===1?'auto':'hidden'}`}} >  
       {loading?<div style={{background:'rgba(0,0,0,0.1)',position:'fixed', top:0, left:0, right:0, bottom:0, zIndex:99999, display:'flex', justifyContent:'center', alignItems:'center'}}>

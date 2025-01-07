@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
-import {AllComment,InputHadir,InputUcapan,InputNama,DivComment,DivLineTanggal, DivTanggal,DivAtm ,DivAtasNama, ValueKartu,DivButtonSimpanKalender, DivHeader, DivAllComment, DivCommentNama, DivCommentNamaWaktu, DivCommentUcapan} from "./styled";
-import CIP from './../../images/chip-atm-undangan.png'
-import BSI from './../../images/bank-syariah-indonesia-ist_169-removebg-preview.png'
-import Bca from './../../images/bca.png'
-import { FaCommentAlt, FaCopy } from "react-icons/fa";
+import {AllComment,InputHadir,InputUcapan,InputNama,DivComment,DivLineTanggal, DivTanggal,DivButtonSimpanKalender, DivHeader, DivAllComment, DivCommentNama, DivCommentNamaWaktu, DivCommentUcapan} from "./styled";
+// import CIP from './../../images/chip-atm-undangan.png'
+// import BSI from './../../images/bank-syariah-indonesia-ist_169-removebg-preview.png'
+// import Bca from './../../images/bca.png'
+import { FaCommentAlt } from "react-icons/fa";
 import { IoTimeOutline } from "react-icons/io5";
 import app from "./../../config/index";
 import { getDatabase, ref, set, child, get} from "firebase/database";
@@ -267,15 +267,15 @@ const OurGift = ({loading, setLoading})=>{
             </DivComment>
 
             </div>
-            <div style={{height:'60px'}}></div>
+            {/* <div style={{height:'60px'}}></div>
              
              <DivTanggal className="zoom" >
              <DivLineTanggal/>
                Hadiah Spesial
                <DivLineTanggal/>
 
-            </DivTanggal>
-            <div style={{marginTop:'30px',display:'flex',justifyContent:'center',alignItems:'center',flexDirection:'column'}}>
+            </DivTanggal> */}
+            {/* <div style={{marginTop:'30px',display:'flex',justifyContent:'center',alignItems:'center',flexDirection:'column'}}>
 
                 <DivAtm  className="zoom">
                     <div style={{display:'flex',justifyContent:'end',background:'',marginRight:'40px',marginTop:'-5px'}}>
@@ -308,7 +308,7 @@ const OurGift = ({loading, setLoading})=>{
                             Salin</DivButtonSimpanKalender>
                     </div>
                 </DivAtm>
-            </div>
+            </div> */}
        
         </div>
     )   
